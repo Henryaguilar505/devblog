@@ -1,0 +1,1 @@
+<h1 class="text-2xl">Dev<span class="font-extrabold">Blog</span></h1>
