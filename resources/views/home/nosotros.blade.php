@@ -13,7 +13,10 @@
 
                     <h1 class="font-bold text-2xl text-center mb-10">Sobre Nosotros</h1>
                    
-                  
+                    <div class="bg-white p-4 text-gray-700 mb-4 shadow-md md:flex md:gap-8 rounded-lg">
+                             <p>Próximamente...</p>
+                
+                         </div>
         
                   
                   
