@@ -25,13 +25,13 @@
                    
                     <div class="p-5">
 
-                        <div class="flex justify-center items-center h-60">
+                        {{-- <div class="flex justify-center items-center h-60">
                         <form action="{{route('imagenes.store')}}" method="POST" enctype="multipart/form-data" id="dropzone"
                         class="dropzone border-dashed border-2 w-full md:w-1/3 min-h-[100%] flex flex-col justify-center items-center">
                         @csrf
 
                         </form>
-                        </div>
+                        </div> --}}
 
                         <form method="POST" action="{{route('posts.store')}}" novalidate>
                             @csrf

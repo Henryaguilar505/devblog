@@ -43,7 +43,6 @@ class PostController extends Controller
 
         
         $this->validate($request, [
-            'imagen' => 'required',
             'titulo' => 'required|string|min:10',
             'categoria_id' => 'required',
             'contenido' => 'required'
@@ -54,7 +53,7 @@ class PostController extends Controller
             'categoria_id' => $request->categoria_id,
             'contenido' => $request->contenido,
             'user_id' => Auth()->user()->id,
-            'imagen' =>$request->imagen,
+             'imagen' =>'no dsiponible',
             'status' => true
         ]);
 
@@ -98,7 +97,7 @@ class PostController extends Controller
 
         //validar
         $this->validate($request, [
-            'imagen' => 'required',
+            // 'imagen' => 'required',
             'titulo' => 'required|string|min:10',
             'categoria_id' => 'required',
             'contenido' => 'required'
@@ -106,7 +105,7 @@ class PostController extends Controller
 
         //asignar los nuevos valores
         $post->titulo = $request->titulo;
-        $post->imagen=$request->imagen;
+        // $post->imagen=$request->imagen;
         $post->categoria_id=$request->categoria_id;
         $post->contenido = $request->contenido;
         

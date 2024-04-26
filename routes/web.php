@@ -51,8 +51,8 @@ Route::get('/posts/saved', [PostController::class, 'saved'])->middleware(['auth'
 
 
 
-Route::post('/imagenes', [imagenController::class, 'store'])->name('imagenes.store');
-Route::get('/imagenes/eliminar', [ImagenController::class, 'eliminar'])->name('imagenes.eliminar');
+// Route::post('/imagenes', [imagenController::class, 'store'])->name('imagenes.store');
+// Route::get('/imagenes/eliminar', [ImagenController::class, 'eliminar'])->name('imagenes.eliminar');
 
 
 require __DIR__.'/auth.php';

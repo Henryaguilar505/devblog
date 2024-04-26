@@ -13,7 +13,7 @@ Dropzone.autoDiscover = false;
 
 const dropzone = new Dropzone("#dropzone", {
     dictDefaultMessage: "Imagen aquí",
-    acceptedFiles: ".png,.jpg,.jpeg..gif",
+    acceptedFiles: ".png,.jpg,.jpeg,.gif",
     addRemoveLinks: true,
     dictRemoveFile: "Borrar archivo",
     maxFiles: 1,

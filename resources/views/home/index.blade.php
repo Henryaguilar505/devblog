@@ -14,17 +14,17 @@
                  @forelse ($posts as $post)
                      <a href="{{route('posts.show', $post) }}">
                          <div class="bg-white p-4 text-gray-700 mb-4 shadow-md md:flex md:gap-8 rounded-lg">
-                             <div class="md:w-[30%] md:flex md:items-center">
-                                 <img class="h-auto" src="{{ asset('uploads/' . $post->imagen) }}" alt="">
-                             </div>
-                             <div class="md:w-[65%] md:flex md:flex-col md:justify-between">
+                             <div class="md:w-full md:flex md:flex-col md:justify-between">
                                  <div class="mt-2 md:mt-0">
                                      <p class= "bg-sky-700 text-white w-fit px-2 text-sm font-semibold py-1 rounded-md">
                                          {{ $post->categoria->nombre }}</p>
                                      <h2 class="text-xl font-bold text-gray-800">{{ $post->titulo }}</h2>
                                  </div>
                                  <div class="mb-2 md:mb-0">
-                                     {!! mb_substr($post->contenido, 0, 400, 'UTF-8') !!} <span>...</span>
+                                    {!! mb_substr(strip_tags($post->contenido), 0, 300, 'UTF-8') !!}
+                                    @if(mb_strlen(strip_tags($post->contenido)) > 300)
+                                        <span>...</span>
+                                    @endif
                                  </div>
 
                                  <div>
